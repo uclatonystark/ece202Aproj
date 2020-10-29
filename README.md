@@ -2,7 +2,7 @@
 
 ## Team Members
 - Hou Pong Chan (104772329)
-- Salil Aditya 
+- Salil Akundi 
 
 ## Links
 ### Project Repositories
