@@ -18,11 +18,16 @@ In this project, we propose to solve this issue by making the process of page tu
 ### Goal
 To build an embedded system that consists of a glove and an tablet/computer to automatically turn pages given the range of two octaves (C3 to C5) and white keys only.
 ### Deliverable
-[edit this]
+A glove and a page turning software. 
+Glove that can give sensor values of which fingers are used and where the fingers are. Then, that data gets converted into the positions of the keys that are pressed. Then, the software takes in that information and turn page 2 measures before the page ends.
 
 ## Hardware Used in This Project
 - Arduino BLE
 - Force Sensor
+- Glove
+- Hall effect 
+- (maybe LIDAR) 
+- IMU
 
 ## Part I: 
 [edit in the future]
