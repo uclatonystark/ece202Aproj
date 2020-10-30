@@ -24,18 +24,18 @@ To build an embedded system that consists of a glove and a tablet/computer to au
 3) A demonstration of the automatic page turner in action in the form of a video and report.
 ## Hardware Used in This Project
 - Arduino BLE
-- Force/Pressure Sensor (x 10)
-- Position Sensor (x 4)
+- Force/Pressure Sensor (x10)
+- Position Sensor (x4)
 
 ## Project Timeline
-Week 4: Finalize project idea and research relevant prior literature
-Week 5: [edit this]
-Week 6: [edit this]
-Week 7: [edit this]
-Week 8: [edit this]
-Week 9: [edit this]
-Week 10: [edit this]
-Finals Week: [edit this]
+- Week 4: Finalize project idea and research relevant prior literature
+- Week 5: [edit this]
+- Week 6: [edit this]
+- Week 7: [edit this]
+- Week 8: [edit this]
+- Week 9: [edit this]
+- Week 10: [edit this]
+- Finals Week: [edit this]
 
 ## Analysis of Prior Literature
 [edit this]
