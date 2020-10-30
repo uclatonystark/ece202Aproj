@@ -16,9 +16,9 @@ Often time piano players have to rely on external devices or people to turn page
 
 Overall, we concluded that a better approach will be to estimate the position of the notes being played. To do that, we propose a glove (gloves) filled with sensors that can detect the position of wrist, positions of fingers, and which fingers are used. This method allows players to not have to install sensors all over the piano. 
 ### Goal
-As an entry point, we are trying to achieve key position estimation on two octaves (C3 to C5 for example) with white keys only.
+As an entry point, we are trying to achieve key position estimation on two octaves (C3 to C5 for example) with white keys only. 
 ### Deliverable
-[edit this]
+Player with this glove will read music sheet from a tablet or computer that has information about the keys the player pressed. Then the music sheet will automatically turn 2 measures before reaching the end of the page. 
 
 ## Hardware Used in This Project
 - Arduino BLE
