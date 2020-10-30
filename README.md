@@ -1,4 +1,4 @@
-# Project: Automatic Piano Page Turner
+# Project: Automatic Music Page Turner
 
 ## Team Members
 - Hou Pong Chan (104772329)
@@ -16,7 +16,7 @@ Musicians have long been hampered by the challenge of turning sheet music while 
 
 In this project, we propose to solve this issue by making the process of page turning fully automatic. This is done by means of an embedded system, which recognizes and maps hand and finger movements to the music that is being played in real time. This will ensure for more accurate and stress-free page turning, and an overall pleasant experience for both the musician and the audience.
 ### Goal
-To build a automatic piano page turner 
+To build a automatic music page turner 
 ### Deliverable
 [edit this]
 
