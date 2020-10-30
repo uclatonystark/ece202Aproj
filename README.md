@@ -12,13 +12,13 @@ Youtube
 
 ## Project Introduction
 ### Motivation
-Often time piano players have to rely on external devices or people to turn pages for them. They either have to pay a lot to hire someone or for a huge device to turn pages for them. Although recent technological advancement allows players to use a pedal to turn 'pages' on a tablet, it still distracts the players by having them to press the pedal while reading the music sheet and playing. Moreover, sound detecting devices might be able to capture players' music and make prediction on turning pages. However, that would not work in an environment where multiple players are playing at once in the same room. 
+Musicians have long been hampered by the challenge of turning sheet music while their hands are occupied in playing an instrument. For years, human page turners, i.e., a person whose sole purpose is to turn pages for the musician, have been the preferred method of solving this challenge. In more recent years, expensive assistive technologies such as foot pedals, voice and eye-controlled switches have come into use and grown in popularity. However, these assistive methods rely on some form of gesture that the musician must remember while turning a page, which can be a source of distraction in concerts. Moreover, both human and assistive approaches are prone to failure due to their propensity for mistakes and accidental usage or non-usage.
 
-Overall, we concluded that a better approach will be to estimate the position of the notes being played. To do that, we propose a glove (gloves) filled with sensors that can detect the position of wrist, positions of fingers, and which fingers are used. This method allows players to not have to install sensors all over the piano. 
+In this project, we propose to solve this issue by making the process of page turning fully automatic. This is done by means of an embedded system, which recognizes and maps hand and finger gestures to the music that is being played in real time. This will ensure for more accurate and stress-free page turning, and an overall pleasant experience for both the musician and the audience.
 ### Goal
-As an entry point, we are trying to achieve key position estimation on two octaves (C3 to C5 for example) with white keys only. 
+To build a automatic piano page turner 
 ### Deliverable
-Player with this glove will read music sheet from a tablet or computer that has information about the keys the player pressed. Then the music sheet will automatically turn 2 measures before reaching the end of the page. 
+[edit this]
 
 ## Hardware Used in This Project
 - Arduino BLE
