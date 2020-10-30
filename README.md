@@ -16,18 +16,14 @@ Musicians have long been hampered by the challenge of turning sheet music while 
 
 In this project, we propose to solve this issue by making the process of page turning fully automatic. This is done by means of an embedded system, which recognizes and maps hand and finger movements to the music that is being played in real time. This will ensure for more accurate and stress-free page turning, and an overall pleasant experience for both the musician and the audience.
 ### Goal
-To build an embedded system that consists of a glove and an tablet/computer to automatically turn pages given the range of two octaves (C3 to C5) and white keys only.
-### Deliverable
-A glove and a page turning software. 
-Glove that can give sensor values of which fingers are used and where the fingers are. Then, that data gets converted into the positions of the keys that are pressed. Then, the software takes in that information and turn page 2 measures before the page ends.
-
+To build an embedded system that consists of a glove and a tablet/computer to automatically turn electronic pages of sheet music in real-time
+### Deliverables
+1) A glove-like wearable device that detects which fingers are used and their positions
+2) Page-turning software that uses data from the wearable device and compares it with sheet music in order to turn the page
+3) A demonstration of the automatic page turner in action in the form of a video and report.
 ## Hardware Used in This Project
 - Arduino BLE
 - Force Sensor
-- Glove
-- Hall effect 
-- (maybe LIDAR) 
-- IMU
 
 ## Part I: 
 [edit in the future]
