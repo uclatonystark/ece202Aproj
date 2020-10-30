@@ -12,9 +12,11 @@ Youtube
 
 ## Project Introduction
 ### Motivation
-Musicians have long been hampered by the challenge of turning sheet music while their hands are occupied in playing an instrument. For years, human page turners, i.e., a person whose sole purpose is to turn pages for the musician, have been the preferred method of solving this challenge. In more recent years, expensive assistive technologies such as foot pedals, voice and eye-controlled switches have come into use and grown in popularity. However, these assistive methods rely on some form of gesture that the musician must remember while turning a page, which can be a source of distraction in concerts. Moreover, both human and assistive approaches are prone to failure due to their propensity for mistakes and accidental usage or non-usage.
+Musicians have long been disadvantaged by having to turn their sheet music whilst their hands are occupied on the instrument. Professional musicians performing a complex score have typically relied on human page-turners, who must be alert and skilled to gauge the musician’s preferences.
 
-In this project, we propose to solve this issue by making the process of page turning fully automatic. This is done by means of an embedded system, which tracks and maps hand and finger movements to the music that is being played in real time. This will ensure for more accurate and stress-free page turning, and an overall pleasant experience for both the musician and the audience.
+In recent years, expensive assistive technologies involving foot pedals, voice and eye-controlled devices have emerged and grown in popularity. However, these methods rely on a gesture or action initiated by the musician to trigger a page-turn, which can be distracting in a concert setting. Further, the human and assistive approaches are both prone to error from inattention, omission or incorrect use.
+
+In this project, we propose to solve this centuries-old problem by rendering the process of page turn entirely automatic. This is achieved by an embedded system that recognizes and maps the musician’s hand and finger movements to the music playing in real time. This makes the page-turn precise and stress-free, allowing the musicians to focus on the creative aspects of the program.
 
 ### Goal
 To build an embedded system that consists of a glove and a tablet/computer to automatically turn electronic pages of sheet music in real-time
