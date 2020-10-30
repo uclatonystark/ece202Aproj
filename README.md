@@ -16,7 +16,7 @@ Musicians have long been hampered by the challenge of turning sheet music while 
 
 In this project, we propose to solve this issue by making the process of page turning fully automatic. This is done by means of an embedded system, which recognizes and maps hand and finger movements to the music that is being played in real time. This will ensure for more accurate and stress-free page turning, and an overall pleasant experience for both the musician and the audience.
 ### Goal
-To build a automatic music page turner 
+To build an embedded system that consists of a glove and an tablet/computer to automatically turn pages given the range of two octaves (C3 to C5) and white keys only.
 ### Deliverable
 [edit this]
 
