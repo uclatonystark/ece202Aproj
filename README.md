@@ -6,7 +6,7 @@
 
 ## Links
 ### Project Repositories
-Github
+[Github](https://github.com/uclatonystark/ece202Aproj)
 ### Final Presentation Video
 Youtube
 
