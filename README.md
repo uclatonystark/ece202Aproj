@@ -30,14 +30,27 @@ To build an embedded system that consists of a glove and a tablet/computer to au
 - Position Sensor (x4) [Hall Effect or LIDAR]
 
 ## Project Timeline
-- Week 4: Finalize project idea and research relevant prior literature
-- Week 5: Hardware: Finish Glove Design ; Software: Research and determine page turner software interface 
-- Week 6: Hardware: Order materials and assemble + Sensor Testing ; Software: Finalize music sheet to music note conversion 
-- Week 7: Hardware: Arduino programming for finger positions detection ; Software: Determine algorithm for matching music notes from sheet to sensor values (I)
-- Week 8: Hardware: Arduino programming for fingter activation + collabration detection ; Software: Determine algorithm for matching music notes from sheet to sensor values (II)
-- Week 9: Hardware: Finalize hardware assembly and test accuracy of sensor values ; Finalize software algorithm
-- Week 10: Integrate both hardware and software
-- Finals Week: Final testing
+- Week 4: 
+  - Finalize project idea and research relevant prior literature
+- Week 5: 
+  - Hardware: Finish Glove Design
+  - Software: Research and determine page turner software interface 
+- Week 6: 
+  - Hardware: Order materials and assemble + Sensor Testing
+  - Software: Finalize music sheet to music note conversion 
+- Week 7: 
+  - Hardware: Arduino programming for finger positions detection
+  - Software: Determine algorithm for matching music notes from sheet to sensor values (I)
+- Week 8: 
+  - Hardware: Arduino programming for fingter activation + collabration detection
+  - Software: Determine algorithm for matching music notes from sheet to sensor values (II)
+- Week 9: 
+  - Hardware: Finalize hardware assembly and test accuracy of sensor values
+  - Software: Finalize software algorithm
+- Week 10: 
+  - Integrate both hardware and software
+- Finals Week: 
+  - Final testing
 
 ## Analysis of Prior Literature
 [edit this]
