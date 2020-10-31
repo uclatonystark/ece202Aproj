@@ -52,8 +52,5 @@ To build an embedded system that consists of a glove and a tablet/computer to au
 - Finals Week: 
   - Final testing
 
-## Analysis of Prior Literature
-[edit this]
-
 ## Part I: 
 [edit in the future]
