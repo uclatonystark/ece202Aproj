@@ -52,6 +52,20 @@ To build an embedded system that consists of a glove and a tablet/computer to au
 - Finals Week: 
   - Final testing
 
-## Part I: 
-[edit in the future]
+## Technical Approach covering data sets, algorithms, etc. and novelty of our approach
 
+## Implementation, experimental evaluation, success metrics, and key findings
+
+## Prior work examples including references, and the relative novelty of your work
+
+## Strengths and weakness, and future directions
+(indoor)
+
+## contributions of each team member
+Pong:
+
+Salil:
+
+## Section with links to PDF of your final presentation slides, and any data sets not in repo
+
+## References
