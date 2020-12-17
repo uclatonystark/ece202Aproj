@@ -53,8 +53,14 @@ A video demonstration that shows successful page turning while a player plays th
 
 ## Technical Approach 
 covering data sets, algorithms, etc. and novelty of our approach
+1. Music Score Generation: Generate information about octave position of each note, number of notes per page from a PDF or images
+2. Glove: Monitor sensor values and IMU data (accelormeter, gyroscope, magnetometer)
+3. Data Organziation: Load information about music score and sensor values
+4. Page Turner: In real time, calculate number of presses and their cooresponding octave ranges and determine when to turn page
 
 ## Music Score Generation
+
+
 ## Glove Design
 Due to time limit and budget constraint, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below.
 <p float="left" align="center">
