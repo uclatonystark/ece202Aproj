@@ -25,9 +25,9 @@ To build an embedded system that consists of a glove and a tablet/computer to au
 2) Page-turning software that uses data from the wearable device and compares it with sheet music being used in order to turn pages
 3) A demonstration of the automatic page turner in action in the form of a video and report.
 ## Hardware Used in This Project
-- Arduino BLE
-- Force/Pressure Sensor (x10)
-- Position Sensor (x4) [Hall Effect or LIDAR]
+- Arduino Nano 33 Sense BLE
+- Force/Pressure Sensor (x5)
+- Glove
 
 ## Project Timeline
 - Week 4: 
@@ -58,9 +58,10 @@ To build an embedded system that consists of a glove and a tablet/computer to au
 
 ## Prior work examples including references, and the relative novelty of your work
 
-## Strengths and weakness, and future directions
-(indoor)
-
+## Summary
+### Strength
+### Weakness
+### Future Directions
 ## contributions of each team member
 Pong:
 
