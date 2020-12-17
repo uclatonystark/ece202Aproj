@@ -60,12 +60,37 @@ To build an embedded system that consists of a glove and a tablet/computer to au
 
 ## Summary
 ### Strength
+- Ease of use
+  - User only needs to input a PDF / series of images to compile complete music score
+  - Glove is sensitive enough to track each press
+- Low budget
+  - Comparing to other other localization, using dead reckoning with IMU and five pressure sensors is very light weight and cost efficient
+  - Existed products such as pedals, clickers or human helpers are extremely expensive
+- Novelty
+  - Unlike other existed products, this glove can make user to switch page without having to press a pedal or help from a helper
 ### Weakness
+- Set up time
+  - To prepare a music score for one piece, it takes about 10 minutes. However, user can use the same output files in conjuction with page turner without the set up
+- Octave range accuracy
+  - Approximating octave range using only IMU and linear acceleration, the accuracy is low and calibration is not very predictable. 
+- Wired connection
+  - Due to limited time, wire connection was done. Wireless glove might be ideal although a battery will have to be mounted on the glove
 ### Future Directions
+- API and software Integration
+  - Combine API and python scripts into one GUI for ease of use
+- Better dead reckoning model and algorithm
+  - To obtain higher octave range accuracy
+- Wireless glove
+  - To utlizie the BLE nature of the Arduino although error-free decoding scheme is needed which will take more time out of the real-time sensing cycle
 ## contributions of each team member
-Pong:
-
-Salil:
+-Pong
+  - Designed, soldered, assembled glove
+  - Developed arduino firmware to collect data
+  - Created Python scripts 
+      1. to communicate between laptop and Arduino 
+      2. to calculate and organize data including finger presses and octave range
+      3. to display a functioning page turner
+-Salil
 
 ## Section with links to PDF of your final presentation slides, and any data sets not in repo
 
