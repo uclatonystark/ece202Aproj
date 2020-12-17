@@ -66,7 +66,7 @@ Our project allows a wide flexiblity to user since error is loosely tracked, whi
 The detail of the mentioned algorithm is displayed in the following sections.
 
 ## Music Score Generation
-
+**Salil edit here**
 
 ## Glove Design
 Due to time limit and budget constraint, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below. The red USB port is for powering the glove with a battery if wireless communication is established. However, we did not achieve that due to time limit.
@@ -83,6 +83,8 @@ The PCB board placed on the back of the glove is where the Arduino and the sensi
 The resistor value was chosen based on testing with the pressure sensors. Arduino code `Project__sensing.ino` was then implemented to collect pressure sensor and IMU data. The final serial output of the Arduino (pressure sensor values x5 + accel. gyro. mag.) will be sent to a laptop for more processing and calculations.
 
 ## Sensor Value Processing
+
+
 ## Page Turner
 
 ## Implementation, experimental evaluation, success metrics, and key findings
