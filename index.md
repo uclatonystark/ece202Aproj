@@ -82,7 +82,7 @@ To build an embedded system that consists of a glove and a tablet/computer to au
   - To obtain higher octave range accuracy
 - Wireless glove
   - To utlizie the BLE nature of the Arduino although error-free decoding scheme is needed which will take more time out of the real-time sensing cycle
-## contributions of each team member
+## Contributions of Each Team Member
 - Pong
   - Designed, soldered, assembled glove
   - Developed arduino firmware to collect data
