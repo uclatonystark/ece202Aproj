@@ -69,7 +69,7 @@ The detail of the mentioned algorithm is displayed in the following sections.
 
 
 ## Glove Design
-Due to time limit and budget constraint, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below.
+Due to time limit and budget constraint, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below. The red USB port is for powering the glove with a battery if wireless communication is established. However, we did not achieve that due to time limit.
 <p float="left" align="center">
   <img align="center" src="glove_palm.jpg" width="250" height="350"> 
   <img align="center" src="glove_back.jpg" width="250" height="350">
