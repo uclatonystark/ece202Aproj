@@ -49,9 +49,19 @@ A video demonstration that shows successful page turning while a player plays th
 - Week 10: 
   - Integrate both hardware and software
 - Finals Week: 
-  - Final testing
+  - Final testing and report writing
 
-## Technical Approach covering data sets, algorithms, etc. and novelty of our approach
+## Technical Approach 
+covering data sets, algorithms, etc. and novelty of our approach
+
+## Music Score Generation
+## Glove Design
+Due to time limit and budget constraint, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication.
+
+![]()
+
+## Sensor Value Processing
+## Page Turner
 
 ## Implementation, experimental evaluation, success metrics, and key findings
 
