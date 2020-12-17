@@ -52,11 +52,16 @@ A video demonstration that shows successful page turning while a player plays th
   - Final testing and report writing
 
 ## Technical Approach 
-covering data sets, algorithms, etc. and novelty of our approach
+### Novelty
+The main idea of our project is to extract information from a user's performance and the music being played. Using that information, user should be able to fully immerse themselves in the world of music without having to consciously click, step, or hire someone to turn page. When user has pressed 95% of the notes on a page, page turner will turn. Moreover, it constantly estimates a octave range based on player's wrist position. That information is also used to track user's performance. It allows a wide flexiblity to user since error is loosely tracked, which means page doesn't turn in a set time. Unlike some other products that track audio, our project provides a better solution should multiple players play at the same time in the same room.
+
+### Algorithms
 1. Music Score Generation: Generate information about octave position of each note, number of notes per page from a PDF or images
 2. Glove: Monitor sensor values and IMU data (accelormeter, gyroscope, magnetometer)
 3. Data Organziation: Load information about music score and sensor values
 4. Page Turner: In real time, calculate number of presses and their cooresponding octave ranges and determine when to turn page
+
+The detail of the mentioned algorithm is displayed in the following sections.
 
 ## Music Score Generation
 
