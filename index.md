@@ -56,10 +56,13 @@ covering data sets, algorithms, etc. and novelty of our approach
 
 ## Music Score Generation
 ## Glove Design
-Due to time limit and budget constraint, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication.
-
-![]()
-
+Due to time limit and budget constraint, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below.
+<p float="left" align="center">
+  <img align="center" src="glove_palm.jpg" width="250" height="350"> 
+  <img align="center" src="glove_back.jpg" width="250" height="350">
+</p>
+<p align="center">Palm and Back of the glove </p>
+The PCB board placed on the back of the glove is where the Arduino and the sensing circuit are located. The circuit diagram is shown below.
 ## Sensor Value Processing
 ## Page Turner
 
