@@ -67,7 +67,7 @@ The PCB board placed on the back of the glove is where the Arduino and the sensi
 <p float="left" align="center">
   <img align="center" src="glove_circuit.PNG">  
 </p>
-The resistor value was chosen based on testing with the pressure sensors. Arduino code `[Arduino] Sensor Values/Project__sensing.ino` was then implemented to collect pressure sensor and IMU data.
+The resistor value was chosen based on testing with the pressure sensors. Arduino code `Project__sensing.ino` was then implemented to collect pressure sensor and IMU data.
 
 ## Sensor Value Processing
 ## Page Turner
