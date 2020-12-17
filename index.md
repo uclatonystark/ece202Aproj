@@ -21,9 +21,8 @@ In this project, we propose to solve this centuries-old problem by rendering the
 ### Goal
 To build an embedded system that consists of a glove and a tablet/computer to automatically turn electronic pages of sheet music in real-time
 ### Deliverables
-1) A glove-like wearable device that detects which fingers are used and their positions
-2) Page-turning software that uses data from the wearable device and compares it with sheet music being used in order to turn pages
-3) A demonstration of the automatic page turner in action in the form of a video and report.
+A video demonstration that shows successful page turning while a player plays through a piece
+
 ## Hardware Used in This Project
 - Arduino Nano 33 Sense BLE
 - Force/Pressure Sensor (x5)
