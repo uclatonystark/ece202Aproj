@@ -63,6 +63,9 @@ Due to time limit and budget constraint, we chose to focus on only one glove. Si
 </p>
 <p align="center">Palm and Back of the glove </p>
 The PCB board placed on the back of the glove is where the Arduino and the sensing circuit are located. The circuit diagram is shown below.
+<p float="left" align="center">
+  <img align="center" src="glove_circuit.png">  width="250" height="350"
+</p>
 ## Sensor Value Processing
 ## Page Turner
 
