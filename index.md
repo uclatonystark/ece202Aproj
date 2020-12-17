@@ -98,7 +98,7 @@ The resistor value was chosen based on testing with the pressure sensors. Arduin
   - Comparing to other other localization, using dead reckoning with IMU and five pressure sensors is very light weight and cost efficient
   - Existed products such as pedals, clickers or human helpers are extremely expensive
 - Novelty
-  - Unlike other existed products, this glove can make user to switch page without having to press a pedal or help from a helper
+  - Unlike other existed products, this glove can make user switch page without having to press a pedal or help from a helper
 
 ### Weakness
 - Set up time
