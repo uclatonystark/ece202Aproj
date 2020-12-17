@@ -90,8 +90,13 @@ To build an embedded system that consists of a glove and a tablet/computer to au
       1. to communicate between laptop and Arduino 
       2. to calculate and organize data including finger presses and octave range
       3. to display a functioning page turner
--Salil
 
+-Salil
+  - Built API to generate music score
+  - Developed Python scipts
+    1. to calculate information about notes per page and octave positions
+    2. output the results to .txt, .csv, .xml files
+  - Selected songs
 ## Section with links to PDF of your final presentation slides, and any data sets not in repo
 
 ## References
