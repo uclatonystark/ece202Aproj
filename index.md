@@ -83,7 +83,7 @@ To build an embedded system that consists of a glove and a tablet/computer to au
 - Wireless glove
   - To utlizie the BLE nature of the Arduino although error-free decoding scheme is needed which will take more time out of the real-time sensing cycle
 ## contributions of each team member
--Pong
+- Pong
   - Designed, soldered, assembled glove
   - Developed arduino firmware to collect data
   - Created Python scripts 
@@ -91,7 +91,7 @@ To build an embedded system that consists of a glove and a tablet/computer to au
       2. to calculate and organize data including finger presses and octave range
       3. to display a functioning page turner
 
--Salil
+- Salil
   - Built API to generate music score
   - Developed Python scipts
     1. to calculate information about notes per page and octave positions
