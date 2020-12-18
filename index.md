@@ -101,11 +101,21 @@ As shown above, p1 to p5 represent the finger positions (thumb to pinky). '0' me
 ### Octave Range
 In addition to number of presses, we added a feature called 'Octave Range'. Essentially, not only should the program be able to detect the number of presses in a page, it should also measure the estimated accuracy of the notes that are played. For example, if the first three notes are in the 4th Octave, but player is pressing three notes in the 7th Octave, the software should not count those presses because they are not within the Octave Range. Octave Range is calculated using IMU data (accel, gyro, mag) to estimate a set of two Octaves where the player's wrist is approximately located at. Here, we implemented the idea of dead reckoning and assumed the starting point of a song is always somewhere between the 4th and 5th Octave. 
 
-Roll, Pitch, and Yaw are calculated using Extended Kalman Filter. Then we estimated the linear accelerations to be some linear functions of the accelerometer values and RBY. After testing, we concluded that if the z-directional linear accerlation goes to a specific threshold, the octave range increases or decreases by 1.
+Roll, Pitch, and Yaw are calculated using Extended Kalman Filter using an existed Python Library. 
+```python
+from imusensor.filters import kalman
+```
+<p float="left" align="center">
+  <img align="center" src="lin_accel_1.PNG">  
+</p>
+Then we estimated the linear accelerations to be some linear functions of the accelerometer values and RBY. After testing, we concluded that if the z-directional linear accerlation goes to a specific threshold, the octave range increases or decreases by 1.
+<p float="left" align="center">
+  <img align="center" src="lin_accel_2.PNG">  
+</p>
+As shown below, at one instance the player's wrist is appoximated to be somewhere within the 4th and 5th Octave.
 <p float="left" align="center">
   <img align="center" src="octave.PNG">  
 </p>
-As shown above, at one instance the player's wrist is appoximated to be somewhere within the 4th and 5th Octave.
 
 ## Page Turner
 Finally, the page turner combines the data from music score, number of presses, and Octave Range to compute four things: 
