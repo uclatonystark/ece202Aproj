@@ -173,4 +173,6 @@ We believe that without distraction on pedaling or clicking to turn page, user w
   - Selected songs
 
 ## References
-(some paper)
+- Using Inertial Sensors for Position and Orientation Estimation: [link](https://arxiv.org/pdf/1704.06053.pdf)
+- Dead Reckoning Algorithms for Indoor Localization: [link](https://core.ac.uk/reader/48656890)
+- Page Turning Solutions for Musicians: A Survey: [link](https://www.researchgate.net/publication/221748599_Page_turning_solutions_for_musicians_A_survey)
