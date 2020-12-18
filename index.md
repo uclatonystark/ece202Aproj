@@ -81,9 +81,9 @@ The following sections expand on each part of the project:
 
 ## Optical Music Recognition
 Before the page-turner is even used, some preprocessing must be done. In particular, the user must upload a pdf page or a png file of the music score as an input to a script. This script performs uses Tensorflow's Moonlight engine to perform optical music recognition. The below picture, taken from Tensorflow's Moonlight repository outlines this process:
-
-<img src="engine_diagram.svg">
-
+<p float="left" align="center">
+<img src="engine_diagram.svg" width="500" height="1000">
+</p>
 **SALIL EDIT TEXT HERE**
 
 ## Glove Design
@@ -174,7 +174,7 @@ Since this page-turner was intended for use in concert, a comparison in a low-pr
 - Novelty
   - Unlike existing products, this page-turner is fully automatic and relies solely on the process of playing.
 - Accuracy
-  - This page turner only relies on sensor data from the fingers. As a result, it does not suffer from external noise as an audio-based page-turner does. Further, it can be used in concerts where there are multiple instruments being played at the same time.
+  - This page turner does not suffer from external noise as an audio-based page-turner does. Further, it can be used in concerts where there are multiple instruments being played at the same time.
 
 ### Weaknesses
 - Preprocessing time
