@@ -82,9 +82,7 @@ The following sections expand on each part of the project:
 ## Optical Music Recognition
 Before the page-turner is even used, some preprocessing must be done. In particular, the user must upload a pdf page or a png file of the music score as an input to a script. This script performs uses Tensorflow's Moonlight engine to perform optical music recognition. The below picture, taken from Tensorflow's Moonlight repository outlines this process:
 
-<p float="left" align="center">
-  <img align="center" src="engine_diagram.svg" width="250" height="350"> 
-</p>
+<img src="engine_diagram.svg">
 
 **SALIL EDIT TEXT HERE**
 
