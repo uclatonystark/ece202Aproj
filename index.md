@@ -84,7 +84,10 @@ Before the page-turner is even used, some preprocessing must be done. In particu
 <p float="left" align="center">
 <img src="engine_diagram.svg" width="500" height="1000">
 </p>
-**SALIL EDIT TEXT HERE**
+
+In short, the Tensorflow Moonlight engine uses traditional computer vision methods to detect bar-lines and then uses a convolutional neural network to capture notes, and output this information in xml format. Various useful information such as the piece tempo, key signature and information of individual notes are then extracted. A number of precautionary measures are taken in order to ensure the accuracy of the output, including checking for repeated notes and chords. When trills and tremolo appear, an appropriate number of notes is assumed, unless indicated otherwise by the user. We then count the number of notes per page and the relative octave positions of each measure, and store them in a csv file, that is used by the page-turner software to detect a page turn. 
+
+In addition, we have also implemented some features so that musicians can customize the score to their liking. These include the ability to add custom fingerings (this is particularly useful for ‘silent’ finger changes on a single note since the number of presses doesn’t reflect the number of notes in this case) and the ability to add and remove notes.
 
 ## Glove Design
 Due to time and budget constraints, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below. The red USB port is for powering the glove with a battery if wireless communication is established. However, we did not achieve that due to time constraints. 
