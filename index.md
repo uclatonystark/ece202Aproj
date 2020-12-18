@@ -19,7 +19,7 @@ In recent years, expensive assistive technologies involving foot pedals, voice a
 In this project, we propose to solve this centuries-old problem by rendering the process of page turn entirely automatic. This is achieved by an embedded system that recognizes and maps the musician’s hand and finger movements to the music playing in real time. This makes the page-turn precise and stress-free, allowing the musicians to focus on the creative aspects of the program.
 
 ### Goal
-To build an embedded system that consists of a glove and a tablet/computer to automatically turn electronic pages of sheet music in real-time
+To build an embedded system that consists of a glove and a computer to automatically turn electronic pages of sheet music in real-time
 ### Deliverables
 A video demonstration that shows successful page turning while a player plays through a piece
 
