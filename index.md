@@ -57,14 +57,19 @@ A video demonstration that shows successful page turning while a player plays th
 - Finals Week: 
   - Final testing and report writing
 
-## Technical Approach 
-### Novelty
-**Salil EDIT HERE**
+## Review of Existing Work
+**SALIL EDIT**
 
 **Some Existing Products**
   * [STOMP Bluetooth Foot Pedal](https://www.amazon.com/STOMP-Controller-Coda-Music-Technologies/dp/B07DYFD4TR/ref=sr_1_1_sspa?dchild=1&keywords=piano+page+turner&qid=1608283446&sr=8-1-spons&psc=1&smid=A2UX0AN4VJO839&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyV0dGMlVMVkcxMjMwJmVuY3J5cHRlZElkPUEwNDM5MjIxMlhBWUlUTldRWlQ5SyZlbmNyeXB0ZWRBZElkPUEwNDAwMTE3MkpXNVFaR05HMUc0UCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)
   * [Remote Page Turner](https://www.amazon.com/Bluetooth-Page-Turner-Selfie-Remote/dp/B082DJFBSW)
   * [Timer Page Turner](https://www.amazon.com/Turning-Wireless-Controller-Multifunctional-Bluetooth/dp/B07W92ZMDL)
+  
+## Technical Approach 
+### Novelty
+This page turner relies solely on the process of playing the piano with the hands and is the first fully automatic page turner that does not rely on audio. The fact that it does not rely on audio is particularly useful as it means that it can be used in concert settings where there are multiple instruments being played at the same time. The page turner software also allows reasonable room for mistakes during a recital by the musician, thus making the page turning process even more stress-free.  
+
+Another novel aspect of the page turner is its customizability, in particular, the ability to add custom fingerings for individual notes. The musician may chose to add fingerings for individual notes prior to the concert and specify the number of notes desired to be played in a trill or tremolo. Moreover, the easy-to-edit format of the note encodings means that the musician can easily delete or add notes wherever desired. This further increases the accuracy of the page-turner.
 
 ### Algorithm
 1. **Optical Music Recognition**: Extracts information about the overall piece (such as tempo, time signature, etc.), each note (including octave position and fingering), type of note indicated (trills, tremolo, glissandi, etc.), number of notes per page from sheet music in PDF or image format.
@@ -72,10 +77,16 @@ A video demonstration that shows successful page turning while a player plays th
 3. **Data Organziation**: Loads information about music score and sensor values.
 4. **Page Turner**: In real time, calculates number of presses and their cooresponding octave ranges and determines when to turn the page.
 
-The following sections expand on each part of the algorithm:
+The following sections expand on each part of the project:
 
-## Music Score Generation
-**Salil edit here**
+## Optical Music Recognition
+Before the page-turner is even used, some preprocessing must be done. In particular, the user must upload a pdf page or a png file of the music score as an input to a script. This script performs uses Tensorflow's Moonlight engine to perform optical music recognition. The below picture, taken from Tensorflow's Moonlight repository outlines this process:
+
+<p float="left" align="center">
+  <img align="center" src="engine_diagram.svg" width="250" height="350"> 
+</p>
+
+**SALIL EDIT TEXT HERE**
 
 ## Glove Design
 Due to time and budget constraints, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below. The red USB port is for powering the glove with a battery if wireless communication is established. However, we did not achieve that due to time constraints. 
