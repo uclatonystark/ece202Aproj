@@ -6,6 +6,7 @@ from pynput.keyboard import Key, Controller
 from imusensor.filters import kalman
 import numpy as np
 import csv
+import re
 
 ########################################################################################
 #                                     Functions                                        #
@@ -35,12 +36,12 @@ def GetArduinoData():
 def TurnPage(fb,num_turn):
     num_turn = int(num_turn)
     print('num_turn=',num_turn)
-    if fb == 'f':
+    if fb == 'f' or fb == 'F':
         for j in range (num_turn):
             print('j=',j)
             keyboard.press(Key.enter)  # Turn page forward
             time.sleep(0.01)
-    else:
+    elif fb == 'b' or fb == 'B':
         for j in range(num_turn):
             print('j=', j)
             keyboard.press(Key.left)  # Turn page backward
@@ -67,12 +68,24 @@ my = []
 mz = []
 pressed = "10"
 total_press = 0
+
 i = 0 # always starting on first page, index for number of notes
-octave = [4,5,6]
+octave = [4,5]
+
+# User setting for Set1 or Set2
+set = 2 # change to Set1 or Set2  <----------------------------------------------- User can change that
+if set == 1:
+    f_name = 'Set1.pdf'
+    t_name = 'numpresses_1.txt'
+    o_name = 'set1_more_info.csv'
+elif set == 2:
+    f_name = 'Set3.pdf'
+    t_name = 'numpresses_2.txt'
+    o_name = 'set2_more_info.csv'
 
 # Open music sheet in PDF Reader
-pdf = PdfFileReader(open('Set2.pdf', 'rb')) # read pdf
-webbrowser.open_new(r"Set2.pdf")  # open pdf on browser
+pdf = PdfFileReader(open(f_name, 'rb')) # read pdf
+webbrowser.open_new(f_name)  # open pdf on browser
 n = pdf.getNumPages() # display total number of pages
 print('Number of Pages:\t'+str(n))
 keyboard = Controller()
@@ -80,7 +93,7 @@ time.sleep(2)
 
 # Open txt / csv file for page turning information
 page_note = []
-with open('numpresses.txt') as csv_file:
+with open(t_name) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row in csv_reader:
         page_note.append(row)
@@ -100,11 +113,12 @@ num_page_turn = int(page_note[i][3]) # nume of pages turned forward / backward
 # Octave information extraction
 octave_pos = []
 k = 0
-with open('octave.csv',newline='') as csv_file:
+with open(o_name) as csv_file:
     csv_reader = csv.reader(csv_file)
     for row in csv_reader:
-        if k > 0:
-            octave_pos.append(int(row[0]))
+        print(row)
+        if k > 0 and int(row[1])!=0 : # don't include zero
+            octave_pos.append(int(row[1]))
         k = k+1
 ########  Example  ########
 # [octave position in order]   #
@@ -115,6 +129,8 @@ prev_total_press = 0
 R=[]
 P=[]
 Y=[]
+
+eval = []
 # main loop
 while True:
     # get data
@@ -195,30 +211,27 @@ while True:
     yaw = float(sensorfusion.yaw)
 
     # printing
-    #print('p1=', p1)
-    #print('p2=', p2)
-    #print('p3=', p3)
-    #print('p4=', p4)
-    #print('p5=', p5)
+    print('p1=', p1)
+    print('p2=', p2)
+    print('p3=', p3)
+    print('p4=', p4)
+    print('p5=', p5)
     print('total_press=', total_press)
     print('numnote_page', int(page_note[i][0]))
     print('numnote_total', int(page_note[i][1]))
     print('octave_pos:', octave_pos[counter])
     print('octave:', octave)
-    #print("Roll: ", roll)
-    #print("Pitch: ", pitch)
-    #print("Yaw: ", yaw)
 
-    # Computer linear accelration to approximate octave range
+    # Compute linear accelration to approximate octave range
     lax = abs(ax[-1])-abs(roll)
     lay = abs(ay[-1]) - abs(pitch)
     laz = abs(az[-1]) - abs(yaw) - 2
     la = np.array([lax,lay,laz,4])
+    # Use z directional linear accleration to determine octave position
     if laz < -10:
         octave = [i+1 for i in octave] # octave range goes up
     if laz > 10:
         octave = [i-1 for i in octave] # octave range goes down
-    print('lin. accel: ',laz)
 
     # turn page when total_press >= num_note_page
     if total_press >= num_note_turn:
@@ -227,19 +240,42 @@ while True:
 
     # reset fingering arrays when starting a new page
     if total_press >= num_note_tot: # reset total_press when total_press >= num_note_total
+        # Evaluation
+        # all the occurance of presses at the end of the page
+        p1_index = [m.start() for m in re.finditer(pressed, p1)]
+        p2_index = [m.start() for m in re.finditer(pressed, p2)]
+        p3_index = [m.start() for m in re.finditer(pressed, p3)]
+        p4_index = [m.start() for m in re.finditer(pressed, p4)]
+        p5_index = [m.start() for m in re.finditer(pressed, p5)]
+        # from 0 to the end of p1
+        for it in range(len(p1)):
+            temp = []  # at t = it, create empty temp
+            # check and add finger at that t if any
+            if it in p1_index: temp.append('1')
+            if it in p2_index: temp.append('2')
+            if it in p3_index: temp.append('3')
+            if it in p4_index: temp.append('4')
+            if it in p5_index: temp.append('5')
+            # if temp is not empty, add it to eval
+            if len(temp) > 0:
+                eval.append(temp)
+        # Reset all pressure
         p1 = ""
         p2 = ""
         p3 = ""
         p4 = ""
         p5 = ""
         i = i + 1
-        if i >= n: # if i is out of the total number of pages
+        try:
+            print(page_note[i][0])
+        except IndexError: # if i is out of the total number of pages
             print("You are done!")
+            print("finger in order:",eval)
             break
         num_note_turn = int(page_note[i][0])  # number of notes pressed to turn
         num_note_tot = int(page_note[i][1])  # number of notes in total for resetting total_presses
         fb = page_note[i][2]  # 'f' or 'b' to indicate forward or backward
-        num_page_turn = int(page_note[i][3])  # nume of pages turned forward / backward
+        num_page_turn = int(page_note[i][3])  # number of pages turned forward / backward
 
 
 
