@@ -80,11 +80,15 @@ The PCB board placed on the back of the glove is where the Arduino and the sensi
 <p float="left" align="center">
   <img align="center" src="glove_circuit.PNG">  
 </p>
-The resistor value was chosen based on testing with the pressure sensors. Arduino code `Project__sensing.ino` was then implemented to collect pressure sensor and IMU data. The final serial output of the Arduino (pressure sensor values x5 + accel. gyro. mag.) will be sent to a laptop for more processing and calculations.
+The resistor value was chosen based on testing with the pressure sensors. Arduino code `Project__sensing.ino` was then implemented to collect pressure sensor and IMU data. The final serial output of the Arduino (pressure sensor values x5 + accel. gyro. mag.) at 10Hz will be sent to a laptop for more processing and calculations.
 
 ## Sensor Values Processing
 ### Number of Presses
 There are five sensor values corresponding to whether each finger is being pressed or not. After information is transferred to a Python script `turningpage.py`, the sensor values are expressed in time domain.
+<p float="left" align="center">
+  <img align="center" src="press.PNG">  
+</p>
+As shown above, p1 to p5 represent the finger positions (thumb to pinky). '0' means that the finger is not being pressed and '1' means otherwise. The script is able to capture the transitions of each finger that goes from '1' to '0'. That is considered a press. In other words, the total number of presses can be calculated, which is useful to determine when the page should be turned.
 
 ### Octave Range
 
