@@ -92,13 +92,23 @@ As shown above, p1 to p5 represent the finger positions (thumb to pinky). '0' me
 
 ### Octave Range
 In addition to number of presses, we added a feature called 'Octave Range'. Essentially, not only should the program be able to detect the number of presses in a page, it should also measure the estimated accuracy of the notes that are played. For example, if the first three notes are in the 4th Octave, but player is pressing three notes in the 7th Octave, the software should not count those presses because they are not within the Octave Range. Octave Range is calculated using IMU data (accel, gyro, mag) to estimate a set of two Octaves where the player's wrist is approximately located at. Here, we implemented the idea of dead reckoning and assumed the starting point of a song is always somewhere between the 4th and 5th Octave. 
+
+Roll, Pitch, and Yaw are calculated using Extended Kalman Filter. Then we estimated the linear accelerations to be some linear functions of the accelerometer values and RBY. After testing, we concluded that if the z-directional linear accerlation goes to a specific threshold, the octave range increases or decreases by 1.
 <p float="left" align="center">
   <img align="center" src="octave.PNG">  
 </p>
 As shown above, at one instance the player's wrist is appoximated to be somewhere within the 4th and 5th Octave.
 
 ## Page Turner
-forward repeat finish
+Finally, the page turner combines the data from music score, number of presses, and Octave Range to compute four things: 
+- num_note_turn = number of acceptable presses required for page to turn (95% of total notes on that page)
+- num_note_tot = total number of possible presses (notes) on a page
+- fb = whether page should go forward (next line) or backward (repeat)
+- num_page_turn = the number of pages turned forward or backward
+
+The total output will look like this:
+
+When total_press >= num_note_page, the page will be turned. When total_press >= num_note_tot, the total_press will be reset to 0 as a new page is transistioned.
 
 ## Implementation, experimental evaluation, success metrics, and key findings
 
@@ -130,6 +140,8 @@ forward repeat finish
   - To obtain higher octave range accuracy
 - Wireless glove
   - To utlizie the BLE nature of the Arduino although error-free decoding scheme is needed which will take more time out of the real-time sensing cycle
+- Improved mechanical design
+  - With flex PCB or smaller sensors, the glove will have more stability and appealing appearance
 
 ## Contributions of Each Team Member
 - Pong
