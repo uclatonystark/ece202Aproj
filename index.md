@@ -55,7 +55,12 @@ A video demonstration that shows successful page turning while a player plays th
 ### Novelty
 The main idea of our project is to extract information from a user's performance and the music being played. Using that information, user should be able to fully immerse themselves in the world of music without having to consciously click, step, or hire someone to turn page. Moreover, it constantly estimates a octave range based on player's wrist position. When user has pressed 95% of the notes within the octave range on a page, the page will be turned. 
 
-Our project allows a wide flexiblity to user since error is loosely tracked, which means page doesn't turn in a set time. Also, unlike some other products that track audio, our project provides a better solution if multiple players play at the same time in the same room.
+Our project allows a wide flexiblity to user since error is loosely tracked, which means page doesn't turn in a set time. Also, unlike some other products that track audio, our project provides a better solution if multiple players play at the same time in the same room. Once again, our project's goal is to not distract user to pedal or click to turn page while playing. 
+
+**Existed Products**
+  * [STOMP Bluetooth Foot Pedal](https://www.amazon.com/STOMP-Controller-Coda-Music-Technologies/dp/B07DYFD4TR/ref=sr_1_1_sspa?dchild=1&keywords=piano+page+turner&qid=1608283446&sr=8-1-spons&psc=1&smid=A2UX0AN4VJO839&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyV0dGMlVMVkcxMjMwJmVuY3J5cHRlZElkPUEwNDM5MjIxMlhBWUlUTldRWlQ5SyZlbmNyeXB0ZWRBZElkPUEwNDAwMTE3MkpXNVFaR05HMUc0UCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)
+  * [Remote Page Turner](https://www.amazon.com/Bluetooth-Page-Turner-Selfie-Remote/dp/B082DJFBSW)
+  * [Timer Page Turner](https://www.amazon.com/Turning-Wireless-Controller-Multifunctional-Bluetooth/dp/B07W92ZMDL)
 
 ### Algorithm
 1. **Music Score Generation**: Generate information about octave position of each note, number of notes per page from a PDF or images wiht a Collab Notebook
