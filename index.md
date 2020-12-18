@@ -136,7 +136,7 @@ We believe that without distraction on pedaling or clicking to turn page, user w
 
 **What didn't work as expected?**
 - Linear acceleration calculation was not reliable
-- A presssure sensor is slightly larger than a key, which made playing challenging
+- A pressure sensor is slightly larger than a key, which made playing challenging
 
 ## Summary
 ### Strength
