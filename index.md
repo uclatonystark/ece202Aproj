@@ -6,10 +6,12 @@
 
 ## Links
 ### Project Repositories
-[Github](https://github.com/uclatonystark/ece202Aproj)
+Github: [Repo](https://github.com/uclatonystark/ece202Aproj)
 ### Final Presentation Video
-[Presentation]()
-[Demonstration]()
+Youtube: [Presentation]()
+Youtube: [Demonstration](https://youtu.be/4Oe8hPP4c_U)
+### Slides
+
 
 ## Project Introduction
 ### Motivation
@@ -169,8 +171,6 @@ We believe that without distraction on pedaling or clicking to turn page, user w
     1. to calculate information about notes per page and octave positions
     2. to output the results to .txt, .csv, .xml files
   - Selected songs
-
-## Section with links to PDF of your final presentation slides, and any data sets not in repo
 
 ## References
 (some paper)
