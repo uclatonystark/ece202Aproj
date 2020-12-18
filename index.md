@@ -95,6 +95,8 @@ In addition to number of presses, we added a feature called 'Octave Range'. Esse
 <p float="left" align="center">
   <img align="center" src="octave.PNG">  
 </p>
+As shown above, at one instance the player's wrist is appoximated to be somewhere within the 4th and 5th Octave.
+
 ## Page Turner
 forward repeat finish
 
