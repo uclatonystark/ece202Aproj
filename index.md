@@ -11,7 +11,7 @@
 - Youtube: [Presentation](https://youtu.be/4Oe8hPP4c_U)  
 - Youtube: [Demonstration](https://youtu.be/4Oe8hPP4c_U)
 ### Slides
-
+- Google: [Midterm](https://drive.google.com/file/d/1Ieji-psWIU0y5LtgCtp8Dpq32jYOjGBF/view?usp=sharing)
 
 ## Project Introduction
 ### Motivation
