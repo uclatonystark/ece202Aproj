@@ -7,9 +7,11 @@
 ## Links
 ### Project Repositories
 - Github: [Repo](https://github.com/uclatonystark/ece202Aproj)
+
 ### Videos
 - Youtube: [Presentation](https://youtu.be/4Oe8hPP4c_U)  
 - Youtube: [Demonstration](https://youtu.be/4Oe8hPP4c_U)
+
 ### Slides
 - Google: [Midterm](https://drive.google.com/file/d/1Ieji-psWIU0y5LtgCtp8Dpq32jYOjGBF/view?usp=sharing)
 - Google: [Final](https://drive.google.com/file/d/17NQUh9KDr1FrgY1W2HRH_Haq8b49Dw6G/view?usp=sharing)
@@ -57,28 +59,26 @@ A video demonstration that shows successful page turning while a player plays th
 
 ## Technical Approach 
 ### Novelty
-The main idea of our project is to extract information from a user's performance and the music being played. Using that information, user should be able to fully immerse themselves in the world of music without having to consciously click, step, or hire someone to turn page. Moreover, it constantly estimates a octave range based on player's wrist position. When user has pressed 95% of the notes within the octave range on a page, the page will be turned. 
+**Salil EDIT HERE**
 
-Our project allows a wide flexiblity to user since error is loosely tracked, which means page doesn't turn in a set time. Also, unlike some other products that track audio, our project provides a better solution if multiple players play at the same time in the same room. Once again, our project's goal is to not distract user to pedal or click to turn page while playing. 
-
-**Existed Products**
+**Some Existing Products**
   * [STOMP Bluetooth Foot Pedal](https://www.amazon.com/STOMP-Controller-Coda-Music-Technologies/dp/B07DYFD4TR/ref=sr_1_1_sspa?dchild=1&keywords=piano+page+turner&qid=1608283446&sr=8-1-spons&psc=1&smid=A2UX0AN4VJO839&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyV0dGMlVMVkcxMjMwJmVuY3J5cHRlZElkPUEwNDM5MjIxMlhBWUlUTldRWlQ5SyZlbmNyeXB0ZWRBZElkPUEwNDAwMTE3MkpXNVFaR05HMUc0UCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)
   * [Remote Page Turner](https://www.amazon.com/Bluetooth-Page-Turner-Selfie-Remote/dp/B082DJFBSW)
   * [Timer Page Turner](https://www.amazon.com/Turning-Wireless-Controller-Multifunctional-Bluetooth/dp/B07W92ZMDL)
 
 ### Algorithm
-1. **Music Score Generation**: Generate information about octave position of each note, number of notes per page from a PDF or images wiht a Collab Notebook
-2. **Sensor Collection**: Monitor sensor values and IMU data (accelormeter, gyroscope, magnetometer) on glove
-3. **Data Organziation**: Load information about music score and sensor values in a Python script
-4. **Page Turner**: In real time, calculate number of presses and their cooresponding octave ranges and determine when to turn page using a Python script
+1. **Optical Music Recognition**: Extracts information about the overall piece (such as tempo, time signature, etc.), each note (including octave position and fingering), type of note indicated (trills, tremolo, glissandi, etc.), number of notes per page from sheet music in PDF or image format.
+2. **Sensor Collection**: Monitor sensor values and IMU data (accelormeter, gyroscope, magnetometer) on glove.
+3. **Data Organziation**: Loads information about music score and sensor values.
+4. **Page Turner**: In real time, calculates number of presses and their cooresponding octave ranges and determines when to turn the page.
 
-The detail of the mentioned algorithm is displayed in the following sections.
+The following sections expand on each part of the algorithm:
 
 ## Music Score Generation
 **Salil edit here**
 
 ## Glove Design
-Due to time limit and budget constraint, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below. The red USB port is for powering the glove with a battery if wireless communication is established. However, we did not achieve that due to time limit.
+Due to time and budget constraints, we chose to focus on only one glove. Since we decided not to implement GPS or beacon localization, the only sensors are the 5 pressure sensors for each finger and the Arduino Nano 33 BLE Sense for localization and communication. The pictures of our final glove are shown below. The red USB port is for powering the glove with a battery if wireless communication is established. However, we did not achieve that due to time constraints. 
 <p float="left" align="center">
   <img align="center" src="glove_palm.jpg" width="250" height="350"> 
   <img align="center" src="glove_back.jpg" width="250" height="350">
@@ -93,14 +93,14 @@ The resistor value was chosen based on testing with the pressure sensors. Arduin
 
 ## Sensor Values Processing
 ### Number of Presses
-There are five sensor values corresponding to whether each finger is being pressed or not. After information is transferred to a Python script `turningpage.py`, the sensor values are expressed in time domain.
+There are five sensor values corresponding to whether each finger is being pressed or not. After this information is transferred to a Python script `turningpage.py`, the sensor values are expressed in time domain.
 <p float="left" align="center">
   <img align="center" src="press.PNG">  
 </p>
-As shown above, p1 to p5 represent the finger positions (thumb to pinky). '0' means that the finger is not being pressed and '1' means otherwise. The script is able to capture the transitions of each finger that goes from '1' to '0'. That is considered a press. In other words, the total number of presses can be calculated, which is useful to determine when the page should be turned.
+As shown above, p1 to p5 represent the finger positions (thumb to pinky). '0' means that the finger is not being pressed and '1' means otherwise. The script is able to capture the transitions of each finger that goes from '1' to '0'. That is considered a 'press'. In other words, the total number of presses can be calculated, which is used to determine when the page should be turned.
 
 ### Octave Range
-In addition to number of presses, we added a feature called 'Octave Range'. Essentially, not only should the program be able to detect the number of presses in a page, it should also measure the estimated accuracy of the notes that are played. For example, if the first three notes are in the 4th Octave, but player is pressing three notes in the 7th Octave, the software should not count those presses because they are not within the Octave Range. Octave Range is calculated using IMU data (accel, gyro, mag) to estimate a set of two Octaves where the player's wrist is approximately located at. Here, we implemented the idea of dead reckoning and assumed the starting point of a song is always somewhere between the 4th and 5th Octave. 
+In addition to the number of presses, we added a feature called 'Octave Range'. Essentially, not only should the program be able to detect the number of presses in a page, it should also measure the estimated accuracy of the notes that are played. For example, if the first three notes are in the 4th Octave, but the player is playing three notes in the 7th Octave, the software should not count those presses because they are not within the Octave Range. The Octave Range is calculated using IMU data (accel, gyro, mag) to estimate a set of two Octaves where the player's wrist is approximately located at. Here, we implemented the idea of dead reckoning and assumed that the starting point of a piece is always somewhere between the 4th and 5th Octave. 
 
 Roll, Pitch, and Yaw are calculated using Extended Kalman Filter using an existed Python Library. 
 ```python
@@ -125,58 +125,67 @@ Finally, the page turner combines the data from music score, number of presses, 
 - fb = whether page should go forward (next line) or backward (repeat)
 - num_page_turn = the number of pages turned forward or backward
 
-The total output will look like this:
+The total output looks like this:
 <p float="left" align="center">
   <img align="center" src="pageturner.PNG">  
 </p>
-When total_press >= num_note_page, the page will be turned. When total_press >= num_note_tot, the total_press will be reset to 0 as a new page is transistioned.
+When total_press >= num_note_page, the page will be turned backwards or forwards based on the provided instructions in the music score.
 
 ## Results
 ### Evaluation
-We designed a evaluation system on user's performance. This system evaulates the finger(s) user chose to use to play the whole song in order in time domain. One instance is shown below:
+We designed a evaluation system that considers the user's 'performance'. Since other aspects of music cannot be quantified, we solely use accuracy in notes played in order to quantify performance. In particular, we place special emphasis on the accuracy in notes played at the end and start of pages as these typically tend to be the bulk of mistakes when a page turn is performed manually.
+
+This system evaulates the finger(s) user chose to use to play the whole piece in order in time domain. It then compares this against the fingering chosen by the user prior to the concert or the fingering indicated in the music score. One instance is shown below:
 <p float="left" align="center">
   <img align="center" src="eval.PNG">  
 </p>
-We believe that without distraction on pedaling or clicking to turn page, user will utilize their fingers better. User can reflect on his or her performance based on this evaulation metric.
+
+Since this page-turner was intended for use in concert, a comparison in a low-pressure setting (at home) was not performed. However, we believe that without the distraction of manually turning a page, the user can focus their full attention on the creative aspects of the music program.
 
 ### Key Findings
 **What worked?**
-- PDF/images to music score worked very well 
-- Pressure sensing was fairly accurate
-- Evaluation process was precise
+- The page turning process was smooth.
+- Optical music recognition was accurate for electronic music sheets.
+- Pressure sensing was very accurate.
+- Evaluation process was smooth and precise.
 
 **What didn't work as expected?**
-- Linear acceleration calculation was not reliable
-- A pressure sensor is slightly larger than a key, which made playing challenging
+- Linear acceleration calculation was not as reliable as we hoped.
+- A pressure sensor is about as large as a key, which made playing challenging. However, this has to do more with the choice of pressure sensor which we made, due to shipping and time constraints as a result of COVID-19.
+- Optical music recognition was inaccurate for certain (old) scanned sheets of music.
 
 ## Summary
-### Strength
+### Strengths
 - Ease of use
-  - User only needs to input a PDF / series of images to compile complete music score
+  - User only needs to input a PDF / series of images to compile complete music score.
   - Glove is sensitive enough to track each press
 - Low budget
-  - Comparing to other other localization, using dead reckoning with IMU and five pressure sensors is very light weight and cost efficient
-  - Existed products such as pedals, clickers or human helpers are extremely expensive
+  - Compared to  other localization, using dead reckoning with IMU and five pressure sensors is very light weight and cost efficient.
+  - Existed products such as pedals, clickers and mechanical levers are extremely expensive (with a significant number of products costing upwards of $200). 
 - Novelty
-  - Unlike other existed products, this glove can make user switch page without having to press a pedal or help from a helper
+  - Unlike existing products, this page-turner is fully automatic and relies solely on the process of playing.
+- Accuracy
+  - This page turner only relies on sensor data from the fingers. As a result, it does not suffer from external noise as an audio-based page-turner does. Further, it can be used in concerts where there are multiple instruments being played at the same time.
 
-### Weakness
-- Set up time
-  - To prepare a music score for one piece, it takes about 10 minutes. However, user can use the same output files in conjunction with page turner without the set up
+### Weaknesses
+- Preprocessing time
+  - The user must upload pdf files onto the program for preprocessing (prior to the recital, for instance). It takes about 2 minutes to generate an output per page as optical music recognition is complex. However, this is a one-time step and does not have to be repeated.
 - Octave range accuracy
-  - Approximating octave range using only IMU and linear acceleration, the accuracy is low and calibration is not very predictable. 
+  - Approximating octave range using only IMU and linear acceleration, the accuracy is low (the current range is 2 octaves).
 - Wired connection
-  - Due to limited time, wire connection was done. Wireless glove might be ideal although a battery will have to be mounted on the glove
+  - Due to limited time, wire connection was done. Wireless glove might be ideal although a battery will have to be mounted on the glove.
+- Accuracy
+  - This method assumes that the user plays at least 90% of the correct notes per page. This is a fair assumption to make since it is intended for use in concert.
 
 ### Future Directions
 - API and software Integration
-  - Combine API and python scripts into one GUI for ease of use
+  - Combine the entire page-turner into one app for ease of use.
 - Better dead reckoning model and algorithm
-  - To obtain higher octave range accuracy
+  - To obtain higher octave range accuracy.
 - Wireless glove
-  - To utilize the BLE nature of the Arduino although error-free decoding scheme is needed which will take more time out of the real-time sensing cycle
+  - To utilize the BLE nature of the Arduino although error-free decoding scheme is needed which will take more time out of the real-time sensing cycle.
 - Improved mechanical design
-  - With flex PCB or smaller sensors, the glove will have more stability and appealing appearance
+  - With flex PCB or smaller sensors, we hope that the glove will have more stability and a more appealing appearance.
 
 ## Contributions of Each Team Member
 - Pong
@@ -187,14 +196,14 @@ We believe that without distraction on pedaling or clicking to turn page, user w
       2. to calculate and organize data including finger presses and octave range
       3. to display a functioning page turner
 
-- Salil **Please edit this**
-  - Built API to generate music score
-  - Developed Python scipts
-    1. to calculate information about notes per page and octave positions
-    2. to output the results to .txt, .csv, .xml files
-  - Selected songs
+- Salil
+  - Came up with the overall idea for the project
+  - Developed optical music recognition pipeline from pdf/image files to note-level details
+  - Added custom functionality including user-defined fingering, trills, repeats, etc.
+  - Designed test data by notating and annotating scores
 
 ## References
 - Using Inertial Sensors for Position and Orientation Estimation: [link](https://arxiv.org/pdf/1704.06053.pdf)
 - Dead Reckoning Algorithms for Indoor Localization: [link](https://core.ac.uk/reader/48656890)
 - Page Turning Solutions for Musicians: A Survey: [link](https://www.researchgate.net/publication/221748599_Page_turning_solutions_for_musicians_A_survey)
+
