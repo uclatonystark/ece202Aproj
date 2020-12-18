@@ -91,7 +91,10 @@ There are five sensor values corresponding to whether each finger is being press
 As shown above, p1 to p5 represent the finger positions (thumb to pinky). '0' means that the finger is not being pressed and '1' means otherwise. The script is able to capture the transitions of each finger that goes from '1' to '0'. That is considered a press. In other words, the total number of presses can be calculated, which is useful to determine when the page should be turned.
 
 ### Octave Range
-
+In addition to number of presses, we added a feature called 'Octave Range'. Essentially, not only should the program be able to detect the number of presses in a page, it should also measure the estimated accuracy of the notes that are played. For example, if the first three notes are in the 4th Octave, but player is pressing three notes in the 7th Octave, the software should not count those presses because they are not within the Octave Range. Octave Range is calculated using IMU data (accel, gyro, mag) to estimate a set of two Octaves where the player's wrist is approximately located at. Here, we implemented the idea of dead reckoning and assumed the starting point of a song is always somewhere between the 4th and 5th Octave. 
+<p float="left" align="center">
+  <img align="center" src="octave.PNG">  
+</p>
 ## Page Turner
 forward repeat finish
 
