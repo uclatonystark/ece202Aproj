@@ -183,8 +183,6 @@ Since this page-turner was intended for use in concert, a comparison in a low-pr
   - Approximating octave range using only IMU and linear acceleration, the accuracy is low (the current range is 2 octaves).
 - Wired connection
   - Due to limited time, wire connection was done. Wireless glove might be ideal although a battery will have to be mounted on the glove.
-- Accuracy
-  - This method assumes that the user plays at least 90% of the correct notes per page. This is a fair assumption to make since it is intended for use in concert.
 
 ### Future Directions
 - API and software Integration
