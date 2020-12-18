@@ -107,7 +107,9 @@ Finally, the page turner combines the data from music score, number of presses, 
 - num_page_turn = the number of pages turned forward or backward
 
 The total output will look like this:
-
+<p float="left" align="center">
+  <img align="center" src="pageturner.PNG">  
+</p>
 When total_press >= num_note_page, the page will be turned. When total_press >= num_note_tot, the total_press will be reset to 0 as a new page is transistioned.
 
 ## Implementation, experimental evaluation, success metrics, and key findings
