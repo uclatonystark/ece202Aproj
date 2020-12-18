@@ -162,7 +162,7 @@ We believe that without distraction on pedaling or clicking to turn page, user w
 
 ### Weakness
 - Set up time
-  - To prepare a music score for one piece, it takes about 10 minutes. However, user can use the same output files in conjuction with page turner without the set up
+  - To prepare a music score for one piece, it takes about 10 minutes. However, user can use the same output files in conjunction with page turner without the set up
 - Octave range accuracy
   - Approximating octave range using only IMU and linear acceleration, the accuracy is low and calibration is not very predictable. 
 - Wired connection
