@@ -41,7 +41,7 @@ A video demonstration that shows successful page turning while a player plays th
   - Hardware: Arduino programming for finger positions detection
   - Software: Determine algorithm for matching music notes from sheet to sensor values (I)
 - Week 8: 
-  - Hardware: Arduino programming for fingter activation + collabration detection
+  - Hardware: Interaction between Arduino and Python
   - Software: Determine algorithm for matching music notes from sheet to sensor values (II)
 - Week 9: 
   - Hardware: Finalize hardware assembly and test accuracy of sensor values
