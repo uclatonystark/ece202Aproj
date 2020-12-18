@@ -113,6 +113,12 @@ The total output will look like this:
 When total_press >= num_note_page, the page will be turned. When total_press >= num_note_tot, the total_press will be reset to 0 as a new page is transistioned.
 
 ## Implementation, experimental evaluation, success metrics, and key findings
+### Evaluation
+We designed a evaluation system on user's performance. This system evaulates the finger(s) user chose to use to play the whole song in order in time domain. One instance is shown below:
+<p float="left" align="center">
+  <img align="center" src="eval.PNG">  
+</p>
+We believe that without distraction on pedaling or clicking to turn page, user will utilize their fingers better. User can reflect on his or her performance based on this evaulation metrics.
 
 ## Prior work examples including references, and the relative novelty of your work
 
