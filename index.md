@@ -120,12 +120,23 @@ The total output will look like this:
 </p>
 When total_press >= num_note_page, the page will be turned. When total_press >= num_note_tot, the total_press will be reset to 0 as a new page is transistioned.
 
-## Evaluation
+## Results
+### Evaluation
 We designed a evaluation system on user's performance. This system evaulates the finger(s) user chose to use to play the whole song in order in time domain. One instance is shown below:
 <p float="left" align="center">
   <img align="center" src="eval.PNG">  
 </p>
 We believe that without distraction on pedaling or clicking to turn page, user will utilize their fingers better. User can reflect on his or her performance based on this evaulation metric.
+
+### Key Findings
+**What worked?**
+- PDF/images to music score worked very well 
+- Pressure sensing was fairly accurate
+- Evaluation process was precise
+
+**What didn't work as expected?**
+- Linear acceleration calculation was not reliable
+- A presssure sensor is slightly larger than a key, which made playing challenging
 
 ## Summary
 ### Strength
