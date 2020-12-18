@@ -165,7 +165,7 @@ We believe that without distraction on pedaling or clicking to turn page, user w
       2. to calculate and organize data including finger presses and octave range
       3. to display a functioning page turner
 
-- Salil
+- Salil **Please edit this**
   - Built API to generate music score
   - Developed Python scipts
     1. to calculate information about notes per page and octave positions
