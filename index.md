@@ -174,7 +174,7 @@ We believe that without distraction on pedaling or clicking to turn page, user w
 - Better dead reckoning model and algorithm
   - To obtain higher octave range accuracy
 - Wireless glove
-  - To utlizie the BLE nature of the Arduino although error-free decoding scheme is needed which will take more time out of the real-time sensing cycle
+  - To utilize the BLE nature of the Arduino although error-free decoding scheme is needed which will take more time out of the real-time sensing cycle
 - Improved mechanical design
   - With flex PCB or smaller sensors, the glove will have more stability and appealing appearance
 
