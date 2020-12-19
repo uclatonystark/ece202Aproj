@@ -220,4 +220,4 @@ Since this page-turner was intended for use in concert, a comparison in a low-pr
 - [3] Page Turning Solutions for Musicians: A Survey: [link](https://www.researchgate.net/publication/221748599_Page_turning_solutions_for_musicians_A_survey)
 - [4] Tensorflow Moonlight- OMR Engine: [link](https://github.com/tensorflow/moonlight/blob/master/docs/engine.md)
 - [5] Automated Page Turners for Musicians [link](https://doi.org/10.3389/frai.2020.00057)
-- [6] Automatic Page Turning for Musicians via Real-Time Machine Listening
+- [6] Automatic Page Turning for Musicians via Real-Time Machine Listening [link](https://www.researchgate.net/profile/Gerhard_Widmer/publication/220836415_Automatic_Page_Turning_for_Musicians_via_Real-Time_Machine_Listening/links/574d61bc08aec988526a4487/Automatic-Page-Turning-for-Musicians-via-Real-Time-Machine-Listening.pdf)
