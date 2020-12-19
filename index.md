@@ -9,7 +9,7 @@
 - Github: [Repo](https://github.com/uclatonystark/ece202Aproj)
 
 ### Videos
-- Youtube: [Presentation](https://youtu.be/4Oe8hPP4c_U)  
+- Youtube: [Presentation](https://youtu.be/sE32G-yOc_o)  
 - Youtube: [Demonstration](https://youtu.be/4Oe8hPP4c_U)
 
 ### Slides
