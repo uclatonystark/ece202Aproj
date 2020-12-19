@@ -58,7 +58,9 @@ A video demonstration that shows successful page turning while a player plays th
   - Final testing and report writing
 
 ## Review of Existing Work
-**SALIL EDIT**
+Music page-turners of various kinds have been in great demand for the past few decades, especially since the widespread adoption of electronic music scores on tablets in the last decade. These page turners can best be described as semi-automatic in their function. Some examples include Airturn and the Music PadPro, both of which rely on a Bluetooth pedal being pressed by the foot when the page is ready to be turned. Further, reports by users show that these products are often prone to turning multiple pages at once, since the sensors on the pedal may be triggered multiple times.
+
+More recently, an interesting approach [5] makes uses of a predictive model that uses a Kalman filter in order to estimate the musician's gaze at both the score and at the keys. There also exist products which analyze the audio signal in real-time and match it against the score in order to perform a page-turn. However, both of these methods are even more prone to inaccuracy than a finger-sensor based approach since they do not taken into account mistakes/inaccuracies on the musician's part and rely on the models performing the estimation correctly.
 
 **Some Existing Products**
   * [STOMP Bluetooth Foot Pedal](https://www.amazon.com/STOMP-Controller-Coda-Music-Technologies/dp/B07DYFD4TR/ref=sr_1_1_sspa?dchild=1&keywords=piano+page+turner&qid=1608283446&sr=8-1-spons&psc=1&smid=A2UX0AN4VJO839&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyV0dGMlVMVkcxMjMwJmVuY3J5cHRlZElkPUEwNDM5MjIxMlhBWUlUTldRWlQ5SyZlbmNyeXB0ZWRBZElkPUEwNDAwMTE3MkpXNVFaR05HMUc0UCZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)
@@ -213,7 +215,9 @@ Since this page-turner was intended for use in concert, a comparison in a low-pr
   - Designed test data by notating and annotating scores
 
 ## References
-- Using Inertial Sensors for Position and Orientation Estimation: [link](https://arxiv.org/pdf/1704.06053.pdf)
-- Dead Reckoning Algorithms for Indoor Localization: [link](https://core.ac.uk/reader/48656890)
-- Page Turning Solutions for Musicians: A Survey: [link](https://www.researchgate.net/publication/221748599_Page_turning_solutions_for_musicians_A_survey)
-
+- [1] Using Inertial Sensors for Position and Orientation Estimation: [link](https://arxiv.org/pdf/1704.06053.pdf)
+- [2] Dead Reckoning Algorithms for Indoor Localization: [link](https://core.ac.uk/reader/48656890)
+- [3] Page Turning Solutions for Musicians: A Survey: [link](https://www.researchgate.net/publication/221748599_Page_turning_solutions_for_musicians_A_survey)
+- [4] Tensorflow Moonlight- OMR Engine: [link](https://github.com/tensorflow/moonlight/blob/master/docs/engine.md)
+- [5] Automated Page Turners for Musicians [link](https://doi.org/10.3389/frai.2020.00057)
+- [6] Automatic Page Turning for Musicians via Real-Time Machine Listening
